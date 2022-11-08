@@ -64,6 +64,7 @@ public class UserController {
         return "user can only access this !";
     }
 
+    //Principal da el nombre del usuario logueado
     private List<String> getRolesByLoggedInUser(Principal principal) {
         String roles = getLoggedInUser(principal).getRoles();
         List<String> assignRoles = Arrays.stream(roles.split(",")).collect(Collectors.toList());
